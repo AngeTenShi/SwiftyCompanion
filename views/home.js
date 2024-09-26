@@ -79,6 +79,7 @@ export default function Home({navigation}) {
 			if (!token)
 				return ;
 			checkTokenExpiration();
+			console.log("Used token : ", token);
 			const userInfo = await fetch("https://api.intra.42.fr/v2/users/" + username , {
 			method: 'GET',
 			headers: {
